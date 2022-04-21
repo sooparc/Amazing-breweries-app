@@ -1,0 +1,50 @@
+#logo {
+  width: 100%;
+  height: auto;
+}
+
+.App {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header {
+  text-align: center;
+  padding: 7rem 1rem;
+  margin-bottom: 2rem;
+  background-image: url("../src//Assets/MainHeaderImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: -1px 1px 5px #000, 1px 1px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.headerParagraph {
+  margin-top: 30px;
+  font-size: 20px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  width: 70%;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 575.98px) {
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .headerParagraph {
+    font-size: 13px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

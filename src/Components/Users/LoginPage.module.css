@@ -1,0 +1,47 @@
+.body {
+  height: 80vh;
+  overflow-x: hidden;
+}
+
+.loginBox {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin: auto;
+  width: 50%;
+  height: 500px;
+  margin-top: 10vh;
+  box-shadow: 1px 1px 20px 2px rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+.input {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.loginBox h2 {
+  color: white;
+}
+
+.button {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 7px 30px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #000;
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .body {
+    height: 80vh;
+  }
+
+  .loginBox {
+    width: 350px;
+  }
+}
