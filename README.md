@@ -20,3 +20,4 @@ https://breweries-app-ab262.web.app
 
 <img width="1440" alt="Screen Shot 2022-04-27 at 11 41 58 AM" src="https://user-images.githubusercontent.com/94145361/165597386-c44f95d6-f364-41c6-92f3-43ff02fcaaa0.png">
 
+<img width="1440" alt="Screen Shot 2022-04-27 at 11 42 26 AM" src="https://user-images.githubusercontent.com/94145361/165597481-4a8653e4-40ec-4fb3-ba9b-1abebfef3776.png">
