@@ -145,7 +145,7 @@ const Breweries = (props) => {
             let avgReview =
               reviewsArr.reduce((a, b) => a + b, 0) / reviewsArr.length;
 
-            return (
+                     return (
               <div className="col-lg-3" style={{ padding: "0" }} key={i}>
                 <div
                   id="cardImg"
@@ -154,15 +154,7 @@ const Breweries = (props) => {
                     backgroundImage: `url(${brewery.image_url})`,
                   }}
                 >
-                  <div
-                    className={classes.cardWrap}
-                    style={{
-                      position: "absolute",
-                      top: "35%",
-                      left: "3%",
-                      textAlign: "center",
-                    }}
-                  >
+                  <div className={classes.cardWrap}>
                     <p className={classes.cardTitle}>{brewery.name}</p>
                     <p className={classes.cardText}>
                       {brewery.street}, {brewery.city}, {brewery.zip_code}
