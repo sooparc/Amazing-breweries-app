@@ -10,7 +10,7 @@ Amazing-breweries-app was built using these technologies.
 Check out the best breweries in Los Angeles, leave a review and tell us what you think !\
 You can also look up lots of different beers on beer page. Cheers :)
 
-https://breweries-app-ab262.web.app
+https://amazingbreweries.sooparc.com/
 
 <img width="1440" alt="Screen Shot 2022-04-27 at 11 40 10 AM" src="https://user-images.githubusercontent.com/94145361/165597364-7bf13d9c-c8ac-4a99-909d-193842db3a82.png">
 
