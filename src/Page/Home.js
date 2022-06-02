@@ -202,7 +202,7 @@ const Breweries = (props) => {
             let avgReview =
               reviewsArr.reduce((a, b) => a + b, 0) / reviewsArr.length;
 
-            return (
+                     return (
               <div className="col-lg-3" style={{ padding: "0" }} key={i}>
                 <div
                   id="cardImg"
