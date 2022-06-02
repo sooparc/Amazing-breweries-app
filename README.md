@@ -18,7 +18,7 @@ https://amazingbreweries.sooparc.com/
 
 <img width="1440" alt="Screen Shot 2022-06-02 at 4 51 59 PM" src="https://user-images.githubusercontent.com/94145361/171758900-b09362ec-28f8-4ff4-8f77-ff38964a4c4f.png">
 
-<img width="1440" alt="Screen Shot 2022-06-02 at 4 52 19 PM" src="https://user-images.githubusercontent.com/94145361/171758911-41499c84-c0aa-4a35-9f9a-b44be5a6bde9.png">
+<img width="1440" alt="Screen Shot 2022-06-02 at 4 54 29 PM" src="https://user-images.githubusercontent.com/94145361/171758999-96315340-8405-479e-b153-82d7359f75fc.png">
 
 <img width="1440" alt="Screen Shot 2022-06-02 at 4 52 42 PM" src="https://user-images.githubusercontent.com/94145361/171758918-596312ce-124c-4fe6-9099-1538836561d0.png">
 
