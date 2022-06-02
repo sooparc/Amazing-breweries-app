@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import classes from "./BeerDetail.module.css";
-import tipLogo from "../Assets/TipLogo.png";
 import BeerImage from "../Assets/BeerImage.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const BeerDetail = () => {
   const [beerDetails, setBeerDetails] = useState([]);
+  const lightbulbIcon = <FontAwesomeIcon icon={faLightbulb} />;
 
   const { id } = useParams();
 
@@ -40,7 +42,7 @@ const BeerDetail = () => {
             <Card.Text className="my-4">
               <strong>Brewers Tip</strong>
               <span> </span>
-              <img src={tipLogo} className={classes.tipImg} />
+              <span>{lightbulbIcon}</span>
               <br />
               {detail.brewers_tips}
             </Card.Text>

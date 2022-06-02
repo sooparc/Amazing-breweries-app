@@ -1,47 +1,55 @@
 .body {
-  height: 80vh;
+  height: 95vh;
   overflow-x: hidden;
+  background-image: url("../../Assets/LoginPage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .loginBox {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 50px 0px;
   margin: auto;
   width: 50%;
   height: 500px;
-  margin-top: 10vh;
-  box-shadow: 1px 1px 20px 2px rgba(255, 255, 255, 0.4);
+  margin-top: 15vh;
   text-align: center;
 }
 
 .input {
   width: 80%;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 5px;
   padding: 7px;
   border-radius: 5px;
-}
-
-.loginBox h2 {
-  color: white;
+  border: 1px solid #fff;
 }
 
 .button {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  padding: 7px 30px;
+  margin-top: 80px;
+  padding: 7px 50px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid #000;
+  background-color: #ccc;
+  border: 1px solid #ccc;
   color: #fff;
 }
 
 @media (max-width: 575.98px) {
   .body {
-    height: 80vh;
+    height: 100vh;
   }
 
   .loginBox {
+    margin-top: 15vh;
     width: 350px;
   }
 }

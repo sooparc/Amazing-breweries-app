@@ -64,20 +64,17 @@ function App(props) {
       <Route path="/login" exact>
         <MainNavbar />
         <Login setUserEmail={setUserEmail} />
-        <Footer />
       </Route>
 
       <Route path="/register">
         <MainNavbar />
         <Register />
-        <Footer />
       </Route>
 
       {isLoggedIn && (
         <Route path="/profile">
           <MainNavbar />
           <Profile userEmail={userEmail} />
-          <Footer />
         </Route>
       )}
     </div>

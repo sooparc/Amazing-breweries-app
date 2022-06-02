@@ -1,5 +1,4 @@
 .body {
-  background: white;
   height: 100vh;
 }
 
@@ -27,7 +26,7 @@
   font-size: 16px;
   border-radius: 5px;
   width: 40%;
-  border: 1px solid grey;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .input:focus {
@@ -40,8 +39,8 @@
   transform: translateY(-55%);
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
+  background-color: #fff;
+  border: 1px solid #000;
   margin-left: 10px;
 }
 
@@ -60,19 +59,20 @@
 }
 
 .popularSearch:hover {
-  background-color: #ffcb69;
+  background-color: rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
 .cardBox {
-  width: 95%;
+  width: 90%;
   height: 450px;
   border-radius: 5px;
-  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1);
   position: relative;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 20%;
 }
 
@@ -104,8 +104,13 @@
 
 @media (max-width: 575.98px) {
   .input {
-    width: 300px;
+    width: 200px;
   }
+
+  .popularSearch {
+    font-size: 12px;
+  }
+
   .cardBox {
     margin-top: 10vh;
     width: 320px;

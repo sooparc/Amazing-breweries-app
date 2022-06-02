@@ -1,27 +1,39 @@
 .body {
-  height: 70vh;
-  margin-top: 50px;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .container {
+  margin-top: 15vh;
   margin-left: auto;
   margin-right: auto;
   width: 25em;
   border: 1px solid #000;
   border-radius: 10px;
-  padding: 30px;
+  padding: 50px 0px;
   background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.profile {
+  color: #fff;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.label {
+  display: block;
 }
 
 .inputWrap {
-  text-align: right;
+  color: #fff;
 }
 
 .input {
-  margin-top: 10px;
-  margin-left: 10px;
-  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 5px 30px;
   border-radius: 5px;
   border: 1px solid white;
 }
@@ -30,44 +42,19 @@
   background: #ccc;
 }
 
-input[type="file"]::file-selector-button {
-  border: 1px solid white;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
-  background-color: white;
-  transition: 0.3s;
-  margin-left: 33%;
-}
-
-input[type="file"]::file-selector-button:hover {
-  background-color: #81ecec;
-  border: 1px solid #00cec9;
-}
-
-input[type="file"] {
-  color: transparent;
-}
-
-.profilePhoto {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 30px;
-}
-
 .saveBtn {
   padding: 8px 30px;
   border-radius: 5px;
-  border: 1px solid #fff;
+  border: 1px solid #ccc;
+  background-color: #ccc;
 }
 
 @media (max-width: 575.98px) {
   .body {
-    height: 80vh;
+    height: 100vh;
   }
   .container {
     margin-top: 15vh;
-    margin-bottom: 100px;
+    width: 350px;
   }
 }

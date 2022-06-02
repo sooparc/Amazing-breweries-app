@@ -10,6 +10,9 @@ import AuthContext from "../Store/auth-context";
 import { db } from "../firebase";
 import { uid } from "uid";
 import { set, ref, onValue, remove, update } from "firebase/database";
+import Logo from "../Assets/Logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Breweries = (props) => {
   const [show, setShow] = useState(false);
@@ -23,8 +26,14 @@ const Breweries = (props) => {
   const [starTotal, setStarTotal] = useState();
   const [profileImage, setProfileImage] = useState();
 
+  const [modalShow, setModalShow] = useState(false);
+  const handleClose = () => setModalShow(false);
+  const [noClick, setNoClick] = useState(false);
+
   const reviewInputRef = useRef();
   const history = useHistory();
+
+  const warningIcon = <FontAwesomeIcon icon={faTriangleExclamation} />;
 
   const ratingHandler = {
     size: 35,
@@ -45,8 +54,8 @@ const Breweries = (props) => {
     setSelectedBrewery(pickedData);
     setShow(true);
   };
-  // show data
 
+  // show data
   useEffect((i) => {
     onValue(ref(db), (snapshot) => {
       setReviews([]);
@@ -56,6 +65,11 @@ const Breweries = (props) => {
         Object.values(data).map((review) => {
           setReviews((oldArray) => [...oldArray, review]);
         });
+      }
+      let pop_status = localStorage.getItem("showModal");
+      if (!pop_status) {
+        setModalShow(true);
+        localStorage.setItem("showModal", true);
       }
     });
   }, []);
@@ -134,8 +148,51 @@ const Breweries = (props) => {
   const authCtx = useContext(AuthContext);
   const isLoggedIn = authCtx.isLoggedIn;
 
+  const noClickHandler = () => {
+    setNoClick(true);
+  };
+
   return (
     <div style={{ overflowX: "hidden" }}>
+      <Modal
+        show={modalShow}
+        size="xl"
+        style={{
+          backgroundColor: "rgba(0,0,0,0.7)",
+          marginTop: "15vh",
+        }}
+      >
+        <Modal.Header>
+          <Modal.Title className={classes.modalTitle}>
+            Please verify that you are over 21
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          {noClick === false ? (
+            <>
+              <img src={Logo} className={classes.modalImg} />
+              <p className={classes.modalText}>Are you over 21 years of age?</p>
+              <div>
+                <button onClick={handleClose} className={classes.btn}>
+                  YES
+                </button>
+                <button className={classes.btn} onClick={noClickHandler}>
+                  NO
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <img src={Logo} className={classes.img} />
+              <p className={classes.modalText2}>
+                {warningIcon}
+                <span> </span>You are not old enough to view this content
+              </p>
+            </>
+          )}
+        </Modal.Body>
+      </Modal>
+
       <div>
         <div className="row">
           {breweryData.map((brewery, i) => {
@@ -323,9 +380,9 @@ const Breweries = (props) => {
                   )}
                 </div>
               ) : (
-                <p className="text-center mt-3">
-                  Please <a href="/login">Login</a> or<span> </span>
-                  <a href="/register"> Sign up</a> to leave a review.
+                <p className="text-center mt-4">
+                  Please <a href="/login">login</a> or<span> </span>
+                  <a href="/register"> sign up</a> to leave a review.
                 </p>
               )}
             </Modal.Body>

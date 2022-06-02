@@ -1,3 +1,37 @@
+.btn {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 50px;
+  background-color: #fff;
+  border: 1px solid #959595;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  border: 2px solid #000;
+  transition: 0.3s;
+}
+
+.modalImg {
+  margin-top: 50px;
+}
+
+.modalText {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 50px;
+}
+
+.modalText2 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
 .card {
   position: relative;
   height: 50vh;
@@ -94,6 +128,10 @@
   margin-right: auto;
   border-radius: 10px;
   border: 1px solid #ccc;
+}
+
+.textarea:focus {
+  outline: none;
 }
 
 .leaveReviewBtn {
@@ -383,6 +421,26 @@
 }
 
 @media (max-width: 575.98px) {
+  .modalTitle {
+    font-size: 16px;
+  }
+
+  .modalImg {
+    width: 60%;
+  }
+
+  .modalText {
+    font-size: 15px;
+  }
+
+  .modalText2 {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 10px 30px;
+  }
+
   .reviewCard {
     width: 360px;
     margin-left: auto;

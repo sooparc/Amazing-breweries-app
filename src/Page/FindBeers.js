@@ -142,7 +142,7 @@ const FindBeers = () => {
       </div>
 
       <div className={classes.container}>
-        <div className="row px-5">
+        <div className="row m-4">
           {enteredInputValue &&
             enteredInputValue.map((beer) => (
               <div

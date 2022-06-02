@@ -9,42 +9,65 @@
 
 .header {
   text-align: center;
-  padding: 7rem 1rem;
-  margin-bottom: 2rem;
-  background-image: url("../src//Assets/MainHeaderImg.jpg");
+  padding: 12rem 1rem;
+  margin-bottom: 3rem;
+  background-image: url("./Assets/HeaderImg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-bottom: 2px solid #ccc;
 }
 
-.header h1 {
-  color: white;
-  font-size: 40px;
-  text-shadow: -1px 1px 5px #000, 1px 1px 2px #000, 1px -1px 0 #000,
-    -1px -1px 0 #000;
+.headerMain {
+  color: #fff;
+  font-size: 50px;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 .headerParagraph {
-  margin-top: 30px;
-  font-size: 20px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 5px;
-  width: 70%;
-  padding: 30px;
+  margin-top: 40px;
+  font-size: 25px;
+  color: #fff;
+  letter-spacing: 1.2px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Playfair Display", serif;
+}
+
+.icon {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  margin-top: 140px;
+}
+
+.icon:hover {
+  color: #959595;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 @media (max-width: 575.98px) {
-  .header h1 {
-    font-size: 20px;
+  .headerMain {
+    font-size: 30px;
   }
 
   .headerParagraph {
-    font-size: 13px;
-    width: 400px;
+    font-size: 12px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .link {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .navbarLogo {
+    padding: 10px 20px;
   }
 }

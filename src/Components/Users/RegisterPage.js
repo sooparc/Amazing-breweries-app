@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
-
 import classes from "./RegisterPage.module.css";
-import logo from "../../Assets/LoginLogo.png";
 
 const Register = () => {
   const history = useHistory();
@@ -63,12 +61,7 @@ const Register = () => {
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <div className={classes.loginBox}>
-            <img
-              src={logo}
-              alt=""
-              style={{ width: "40%", marginBottom: "25px" }}
-            />
-            <h2>Sign Up</h2>
+            <div className={classes.signup}>Sign up</div>
             <form onSubmit={submitHandler}>
               <div>
                 <label htmlFor="email"></label>
@@ -96,23 +89,19 @@ const Register = () => {
               </div>
 
               {!isLoading && (
-                <button className={classes.button}>Sign Up</button>
+                <button className={classes.button}>Sign up</button>
               )}
               {isLoading && (
                 <p style={{ color: "white" }}>Sending Request...</p>
               )}
             </form>
 
-            <div
-              style={{
-                color: "white",
-                marginBottom: "10px",
-              }}
-              className={classes.accountP}
-            >
-              Already have an accout?
+            <div className={classes.account}>Already have an accout?</div>
+            <div className="mt-2">
+              <a href="/login" className={classes.link}>
+                Login
+              </a>
             </div>
-            <a href="/login">Login</a>
           </div>
         </div>
       </div>

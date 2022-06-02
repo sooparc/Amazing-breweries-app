@@ -1,7 +1,6 @@
 import { useState, useRef, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import classes from "./LoginPage.module.css";
-import logo from "../../Assets/LoginLogo.png";
 import AuthContext from "../../Store/auth-context";
 
 export const Login = (props) => {
@@ -64,14 +63,8 @@ export const Login = (props) => {
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <div className={classes.loginBox}>
-            <img
-              src={logo}
-              alt=""
-              style={{ width: "40%", marginBottom: "25px" }}
-            />
-            <h2>Login</h2>
-
-            <div>
+            <div className={classes.login}>Login</div>
+            <div className="mt-3">
               <input
                 type="email"
                 className={classes.input}

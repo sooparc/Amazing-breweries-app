@@ -1,10 +1,7 @@
-/* eslint-disable */
-
 import React, { useState, useContext, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { storage } from "../firebase";
 import classes from "./Profile.module.css";
-import defaultImg from "../Assets/DefaultImg.png";
 import AuthContext from "../Store/auth-context";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
@@ -93,15 +90,13 @@ const Profile = (props) => {
       <form onSubmit={passwordChangeHandler}>
         <div className={classes.container}>
           <div className="text-center mb-4">
-            <img
-              src={profileImage ? profileImage : defaultImg}
-              className={classes.profilePhoto}
-            />
-            <h2 style={{ color: "white" }}>Profile</h2>
+            <div className={classes.profile}>Profile</div>
           </div>
           <div className={classes.inputWrap}>
-            <div style={{ color: "white" }}>
-              <label htmlFor="email"> Email: </label>
+            <div className="text-center">
+              <label htmlFor="email" className={classes.label}>
+                Email
+              </label>
               <input
                 className={classes.input}
                 type="email"
@@ -111,14 +106,20 @@ const Profile = (props) => {
               ></input>
 
               <br />
-              <label htmlFor="password"> Current password: </label>
+              <label htmlFor="password" className={classes.label}>
+                {" "}
+                Current password{" "}
+              </label>
               <input
                 className={classes.input}
                 type="password"
                 id="password"
               ></input>
               <br />
-              <label htmlFor="newPassword"> New password: </label>
+              <label htmlFor="newPassword" className={classes.label}>
+                {" "}
+                New password{" "}
+              </label>
               <input
                 className={classes.input}
                 type="password"
