@@ -13,6 +13,14 @@ import { set, ref, onValue, remove, update } from "firebase/database";
 import Logo from "../Assets/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import image1 from "../Assets/golden_road_brewery.jpg";
+import image2 from "../Assets/angel_city_brewery.jpg";
+import image3 from "../Assets/arts_district_brewing.jpg";
+import image4 from "../Assets/boomtown_brewery.jpg";
+import image5 from "../Assets/mumford_brewing.jpg";
+import image6 from "../Assets/the_hermosillo_brewery.jpg";
+import image7 from "../Assets/highland_park_brewery.png";
+import image8 from "../Assets/frogtown_brewery.jpeg";
 
 const Breweries = (props) => {
   const [show, setShow] = useState(false);
@@ -25,6 +33,8 @@ const Breweries = (props) => {
   const [selectedBrewery, setSelectedBrewery] = useState({});
   const [starTotal, setStarTotal] = useState();
   const [profileImage, setProfileImage] = useState();
+  const [selectedBreweryIndex, setSelectedBreweryIndex] = useState(null);
+
 
   const [modalShow, setModalShow] = useState(false);
   const handleClose = () => setModalShow(false);
@@ -34,6 +44,17 @@ const Breweries = (props) => {
   const history = useHistory();
 
   const warningIcon = <FontAwesomeIcon icon={faTriangleExclamation} />;
+
+  const picArr = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+  ]
 
   const ratingHandler = {
     size: 35,
@@ -52,6 +73,7 @@ const Breweries = (props) => {
   const selectBrewery = (i) => {
     let pickedData = breweryData[i];
     setSelectedBrewery(pickedData);
+    setSelectedBreweryIndex(i);
     setShow(true);
   };
 
@@ -208,7 +230,7 @@ const Breweries = (props) => {
                   id="cardImg"
                   className={classes.card}
                   style={{
-                    backgroundImage: `url(${brewery.image_url})`,
+                    backgroundImage: `url(${picArr[i]})`,
                   }}
                 >
                   <div className={classes.cardWrap}>
@@ -258,7 +280,7 @@ const Breweries = (props) => {
 
               <div>
                 <img
-                  src={selectedBrewery.image_url}
+                  src={selectedBreweryIndex !== null ? picArr[selectedBreweryIndex] : ""}    
                   style={{
                     width: "100%",
                     height: "300px",
